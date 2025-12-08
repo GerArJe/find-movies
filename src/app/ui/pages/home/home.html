@@ -1,0 +1,16 @@
+<section>
+  @defer (when $showFeaturedTodayMovies()) {
+  <div class="d-grid gap-3">
+    <h2 class="text-headline-l--primary-color mb-0">Featured Today</h2>
+    <app-featured-today-tabs />
+    <div class="d-flex gap-3">
+      <app-card />
+    </div>
+  </div>
+  } @placeholder (minimum 500ms) {
+  <app-featured-today-skeleton />
+  }
+</section>
+<section>
+  <h2 class="text-headline-l--primary-color">Premieres and announcements</h2>
+</section>

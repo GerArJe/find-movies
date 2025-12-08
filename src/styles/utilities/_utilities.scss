@@ -19,3 +19,19 @@
     box-shadow: none;
   }
 }
+
+.placeholder {
+  border-radius: 3px;
+}
+
+.card {
+  width: 171px;
+  height: 258px;
+}
+
+.card-img-overlay {
+  width: fit-content;
+  height: fit-content;
+  background-color: black;
+  top: unset;
+}

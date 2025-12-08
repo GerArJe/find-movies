@@ -1,0 +1,7 @@
+@use '../settings/colors';
+
+.star-icon {
+  color: transparent;
+  background: colors.$gradient;
+  background-clip: text;
+}
