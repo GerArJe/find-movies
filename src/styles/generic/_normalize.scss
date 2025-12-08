@@ -1,0 +1,13 @@
+@use '../settings/typography';
+@use '../settings/colors';
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: typography.$font-family;
+  color: colors.$text-primary;
+  background-color: black;
+}

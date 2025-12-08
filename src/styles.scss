@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'styles/generic/normalize';
+@use 'styles/objects/typography';
+@use 'styles/components/logo';
+@use 'styles/utilities/utilities';

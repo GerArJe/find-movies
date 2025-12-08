@@ -1,0 +1,21 @@
+@use '../settings/colors';
+
+.nav-link.active,
+.nav-link:hover {
+  color: colors.$text-primary !important;
+  border-bottom-color: colors.$text-primary !important;
+  opacity: 100%;
+}
+
+.nav-link {
+  color: colors.$text-primary;
+  opacity: 35%;
+}
+
+.form-control {
+  &:focus {
+    border-color: colors.$primary;
+    border-width: 2px;
+    box-shadow: none;
+  }
+}
