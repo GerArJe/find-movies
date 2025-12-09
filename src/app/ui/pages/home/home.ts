@@ -11,15 +11,16 @@ import { Card } from '../../components/card/card';
   selector: 'app-home',
   imports: [FeaturedTodayTabs, CommonModule, FeaturedTodaySkeleton, Card],
   templateUrl: './home.html',
+  styleUrl: './home.scss',
 })
 export class Home implements OnInit {
   private _movieState = inject(MovieStateService);
 
-  private readonly _$featuredTodayMovies = toSignal(this._movieState.featuredTodayMovies$, {
+  protected readonly $featuredTodayMovies = toSignal(this._movieState.featuredTodayMovies$, {
     requireSync: true,
   });
   protected readonly $showFeaturedTodayMovies = computed(
-    () => this._$featuredTodayMovies().length > 0
+    () => this.$featuredTodayMovies().length > 0
   );
 
   ngOnInit(): void {

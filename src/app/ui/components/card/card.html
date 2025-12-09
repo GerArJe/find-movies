@@ -1,16 +1,12 @@
+@let movie = $movie();
+
 <div class="d-grid gap-3">
   <div class="card text-bg-dark">
-    <img
-      [ngSrc]="'https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg'"
-      class="card-img"
-      alt="..."
-      fill="true"
-      loading="lazy"
-    />
+    <img [ngSrc]="movie.image" class="card-img" [alt]="movie.title" fill />
     <div class="card-img-overlay d-flex">
       <i class="bi bi-star-fill star-icon"></i>
-      <p class="card-text">9.5</p>
+      <p class="card-text">{{ movie.rate }}</p>
     </div>
   </div>
-  <p>The Amazing Maurice</p>
+  <p>{{ movie.title }}</p>
 </div>

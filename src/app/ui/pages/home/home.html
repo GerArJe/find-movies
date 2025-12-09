@@ -3,8 +3,10 @@
   <div class="d-grid gap-3">
     <h2 class="text-headline-l--primary-color mb-0">Featured Today</h2>
     <app-featured-today-tabs />
-    <div class="d-flex gap-3">
-      <app-card />
+    <div class="cards d-flex gap-3">
+      @for (featuredTodayMovie of $featuredTodayMovies(); track $index) {
+      <app-card [$movie]="featuredTodayMovie" />
+      }
     </div>
   </div>
   } @placeholder (minimum 500ms) {
